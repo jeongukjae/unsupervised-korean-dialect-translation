@@ -27,8 +27,8 @@ def main(argv):
         .cache()
     )
     length = len([1 for _ in dataset])
-    dataset = dataset.shuffle(length).take(1000).cache()
-    # length: 1,000,000
+    dataset = dataset.shuffle(length).take(500).cache()
+    # # sentences: 500,000
 
     logging.info(f"dataset element spec: {dataset.element_spec}")
 
